@@ -1,0 +1,33 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+.page
+{
+ font-family: 'MuseoSansCyrl', sans-serif;
+ background-color: rgba(0, 0, 0, 0.0001);
+ color: $clr-black;
+}
+
+.page, .page__body {
+   height: 100%; 
+}
+
+.page__body{
+    margin: 0 auto;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+}
+
+
+li {
+    list-style-type: none;
+}

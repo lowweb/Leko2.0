@@ -1,0 +1,69 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  padding: 45px 30px 30px 30px;
+  background: linear-gradient(20.6deg, #343945 8.53%, #394D61 91.47%), #7C8793;
+  color: #ffffff;
+
+  &__cap {
+    font-size: 38px;
+    line-height: 47px;
+    letter-spacing: -0.682276px;
+    font-weight: 900;
+    margin-bottom: 25px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 70px;
+    background-color: $clr-red-btn;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.287274px;
+    font-weight: 900;
+    color: #ffffff;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+
+  .feedback__field {
+    align-self: stretch;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 100%;
+    max-width: 633px;
+    align-items: center;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.287274px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #FFFFFF;
+
+    &::placeholder {
+      color: #ffffff;
+      opacity: .5;
+    }
+  }
+
+  &__agree {
+    font-size: 12px;
+    line-height: 27px;
+    letter-spacing: -0.215456px;
+  }
+}

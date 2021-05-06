@@ -1,0 +1,106 @@
+
+.header {
+    display: flex;
+    flex-direction: column;
+    // background-color: $clr-grey;
+    padding: 25px 43px 0px 43px;
+
+    &__logo {
+        padding: 18px 21px;
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        background-color: #ffffff;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    &__btn {
+        background-color: $clr-red;
+        color: #ffffff;
+        border-style: none;
+        padding: 9px 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        align-self: flex-end;
+        font-size: 16px;
+        font-weight: 700;
+
+        &:hover{
+            background-color: #b11331;
+        }
+    }
+
+    &--fix {
+        position: fixed;
+        width: 100%;
+        animation-name: hdup;
+        z-index: 3;
+        background-color: #ffffff;
+        animation-duration: .7s;   
+        padding-bottom: 10px;     
+    }
+
+}
+
+.logo {
+    
+    &__link {
+        display: grid;
+        column-gap: 9px;
+        grid-template-columns: min-content 1fr;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__img {
+        grid-row: span 2;
+    }
+
+    &__title {
+        // margin: 0;
+        font-size:30px;
+        font-weight: 900;
+        align-self: flex-end;
+        line-height: 1;
+        letter-spacing: -0.52px;
+    }
+
+    &__tagline {
+        // margin: 0;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+}
+
+
+.menu {
+ &__list {
+     display: flex;
+     align-items: center;
+     background-color: $clr-deep-grey;
+    //  margin: 0;
+     padding: 0 36px;
+     justify-content: flex-end;
+     font-size: 15px;
+     letter-spacing: -0.26932px;
+     text-decoration-line: underline;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+     column-gap: 20px;
+ }
+
+ &__link {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+ }
+}
+
+@keyframes hdup {
+    0%   {top: -112px;}
+    100% {top: 0px;}
+  }

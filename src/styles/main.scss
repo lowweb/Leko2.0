@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+@import "libs";
+@import "fonts";
+@import "base";
+
+//import all from blocks
+@import "../blocks/**/*.scss";
+
+@import "animation";

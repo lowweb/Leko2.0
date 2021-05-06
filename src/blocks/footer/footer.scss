@@ -1,0 +1,56 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 47px 130px 50px 130px;
+    
+    &__col {
+      display: flex;
+      flex-direction: column;
+
+      &--rght {
+        justify-self: flex-end;
+      }
+    }
+
+    &__logo {
+      margin-bottom: 12px;
+    }
+
+    &__address {
+      font-size: 20px;
+      line-height: 33px;
+      letter-spacing: -0.359093px;
+    }
+
+    &__cop {
+      font-size: 16px;
+      line-height: 33px;
+      letter-spacing: -0.287274px;
+    }
+
+    &__tel {
+      font-weight: 900;
+      font-size: 38px;
+      letter-spacing: -0.682276px;
+      margin-bottom: 10px;
+      
+    }
+
+    &__email {
+      font-weight: 900;
+      font-size: 38px;
+      letter-spacing: -0.682276px;
+    }
+
+    &__call {
+      margin-bottom: 10px;
+    }
+
+    & a {
+      color: inherit;
+
+      &:hover {
+        color: $clr-red;
+      }
+    }
+}
