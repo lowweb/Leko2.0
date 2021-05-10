@@ -39,5 +39,8 @@ const observer = new IntersectionObserver(
   }
 );
 
-observer.observe(document.querySelector('.mainsum'));
+if (document.querySelector('.mainsum')) {
+  observer.observe(document.querySelector('.mainsum'));
+}
+
 

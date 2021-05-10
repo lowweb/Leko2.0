@@ -2,6 +2,13 @@
   position: relative;
   background-color: $clr-grey;
   overflow: hidden;
+
+  &--pic {
+    background: url(../images/img-back.jpg);
+    background-size: cover;
+    background-position: center;
+    // height: 416px;
+  }
   
   &__video-cont {
     position: absolute;

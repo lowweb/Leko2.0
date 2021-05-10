@@ -1,0 +1,83 @@
+$check-size: 24px;
+$checkmark-height: 7.5px;
+$checkmark-width: 11px;
+$position-mark: ($check-size/2 - ($checkmark-width - $checkmark-height)/2); 
+
+.check {
+    padding-left: 32px;
+    position: relative;
+    @include fnt-museo (#343537, 16px, 27px, 500);
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        // appearance: none;
+        // -webkit-appearance: none;
+        &:checked + .check__box{
+            border: none;
+            background-color: $clr-red;
+            
+
+            &:before {
+                content: "";
+                position: absolute;
+                transform-origin: left bottom;
+                width: $checkmark-width;
+                height: $checkmark-height;
+                top: 50%;
+                transform: translate($position-mark, -50%) rotate(-45deg);
+                border-left: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+                animation-duration: .8s;
+                animation-timing-function: ease;
+                animation-name: checkmark;
+            }
+        }
+        &:focus + .check__box {
+            
+        }
+
+        &:disabled + .check__box {
+            background-color: #ECEDEE;
+        }
+        &:disabled ~ .check__label {
+          color: #D2D3D4;
+      }
+
+    }
+
+    &__box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-color: #FFFFFF;
+        border: 2px solid $clr-grey-border;
+    }
+}
+
+@keyframes checkmark {
+    0% {
+      height: $checkmark-height;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: $checkmark-height;
+      width: $checkmark-height;
+      opacity: 1;
+    }
+    40% {
+      height: $checkmark-height;
+      width: $checkmark-width;
+      opacity: 1;
+    }
+    100% {
+      height: $checkmark-height;
+      width: $checkmark-width;
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,405 @@
+.calc {
+    // background-color: #ECEDEE;
+
+    & .wrapper {
+        padding: 56px 96px 0 96px;
+        flex-direction: column;
+
+        @media only screen and (max-width: 768px) {
+            padding: 56px 24px 0 24px;
+        }
+        @media only screen and (max-width: 420px) {
+            padding: 40px 20px 0 20px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 24px;
+
+        @media only screen and (max-width: 1050px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content max-content;
+            row-gap: 24px;
+        }
+    }
+
+    &__arrow {
+        align-self: center;
+        &.is-valid > svg > path{
+            stroke: $clr-green;
+        }
+        @media only screen and (max-width: 1050px) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+            & svg {
+                transform: rotate(90deg);
+            }
+            
+
+        }
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+        
+    }
+    &__result {
+        padding: 32px 40px 24px 40px;
+        border-radius: 0px;
+        background-color:#ECEDEE;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        position: relative;
+
+        
+         @media only screen and (max-width: 420px) {
+            padding: 32px 20px 24px 20px;
+          }
+
+        &--cap {
+            @include fnt-museo ( #343537, 20px, 23px, normal);
+            margin-bottom: 16px;
+        }
+
+        &--group {
+            @include fnt-museo ($clr-dark-grey, 20px, 27px, 500);
+            width: 100%;
+
+            & tr {
+                line-height: 40px;
+            }
+
+            & + & {
+                margin-top: 16px;
+            } 
+        }
+        &--summ {
+            display: flex;
+            flex-direction: column;
+            @include fnt-museo (#343537, 20px, 27px, normal);
+        }
+        &--summresume {
+            @include fnt-museo (#343537, 16px, 21px, normal);
+            margin-top: 16px;
+
+        }
+        &--groupresume {
+            margin-top: 8px;
+            margin-bottom: 16px;
+            @include fnt-museo (#343537, 16px, 21px, normal);
+            position: relative;
+            padding-left: 8px;
+
+            &:before {
+                margin-left: -8px;
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 2px;
+                background-color: $clr-red;
+            }
+        }
+        td:nth-child(3n) {
+            text-align: end;
+            width: 28px;
+        }
+        td:nth-child(2) {
+            text-align: end;
+        }
+
+        &--load:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #1D2228;
+            opacity: 0.4;
+            border-radius: 0px;
+            
+        }
+        &--load:after {
+            content: url('../img/loader.svg');
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+     &__form {
+        display: grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 24px;
+        grid-template-areas: "volume weight"
+                            "from from"
+                            "dest dest"
+                            "door door"
+                            "inko inko";
+        @media only screen and (min-width: 650px) and (max-width: 1050px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "volume weight from from"
+                            "dest dest door door"
+                            "inko inko inko inko";
+        }                    
+                            
+
+     }
+     & .field-formmodel-shipping_port_id {
+        grid-area: from;
+     }
+     & .field-formmodel-destination_id{
+        grid-area: dest;
+
+     }
+     & .field-formmodel-volume {
+        grid-area: volume;
+
+     }
+     & .field-formmodel-weight {
+        grid-area: weight;
+
+     }
+
+     & .check {
+        grid-area: door;
+
+     }
+
+     & .radio__group{
+        grid-area: inko;
+
+     }
+
+     & .btn {
+        width: 140px;
+        display: block;
+        float: left;
+        @media only screen and (max-width: 500px) {
+            margin-bottom: 40px;
+        }
+     }
+
+     &__sepline{
+        border-bottom: 1px solid #D2D3D4;
+        display: block;
+        margin-top: 24px;
+        margin-bottom: 24px;
+     }
+
+     & .check {
+         margin-bottom: 32px;
+         @media only screen and (max-width: 1050px) {
+             align-self: center;
+             margin-top: 22px;
+         }
+     }
+    // select2 restyle
+    & .form-control {
+        padding: 8px 14px; 
+        @include fnt-museo (#343537, 17px, 24px, normal);
+        border: 2px solid $clr-grey-border;
+        border-radius: 0px;
+        height: auto;
+        width: 100%;
+        &.is-invalid,&.isvalid {
+            padding: 8px 40px 8px 14px; 
+        }
+        &::placeholder {
+            color: $clr-grey-border;
+        }
+    }
+    & .form-control.is-valid {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%2335C253'/%3E%3Cpath d='M7 12L10.5 15.5L18 8' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+        border: 2px solid $clr-green;
+        border-radius: 0px;
+        padding-right: 40px;
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        background-size: 24px; 
+        
+        & + .select2 .select2-selection {
+            border: 2px solid $clr-green; 
+        }
+
+    }
+    & .form-control.is-invalid {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23DE1832'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.24264 7.75736L7.82843 9.17157L10.6569 12L7.82843 14.8284L9.24264 16.2426L12.0711 13.4142L14.8995 16.2426L16.3137 14.8284L13.4853 12L16.3137 9.17157L14.8995 7.75736L12.0711 10.5858L9.24264 7.75736Z' fill='white'/%3E%3C/svg%3E%0A");
+        border: 2px solid $clr-red;
+        border-radius: 0px;
+        padding-right: 40px;
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        background-size: 24px;
+
+        & + .select2 .select2-selection {
+            border: 2px solid $clr-red; 
+        }
+
+        
+    }
+    & .form-control:not(.is-invalid) {
+        margin-bottom: 32px;
+    }
+    & .form-control:not(.is-invalid) + .select2 {
+        margin-bottom: 32px;
+    }
+
+    & .invalid-feedback{
+        margin-top: 4px;
+        @include fnt-museo ($clr-red, 14px, 16px, normal);
+    }
+    & .custom-checkbox label{
+        @include fnt-museo (#343537, 17px, 24px, normal);
+    }
+
+    & .form-group label {
+        display: block;
+        @include fnt-museo (#343537, 18px, 18px, 500);
+        letter-spacing: 0.03em;
+        margin-bottom: 8px;
+    }
+
+    .select2-container--krajee-bs4 .select2-selection {
+        padding: 8px 40px 8px 14px; 
+        @include fnt-museo (#343537, 17px, 24px, normal);
+        border: 2px solid $clr-grey-border;
+        border-radius: 0px;
+        height: auto;
+ 
+    }
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__placeholder {
+        @include fnt-museo ($clr-grey-border, 17px, 24px, normal);
+        color: $clr-grey-border;
+    }
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__arrow {
+        border: none;
+        border-left: none;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        position: absolute;
+        height: 98%;
+        top: 1px;
+        right: 1px;
+        width: 36px;
+
+    }
+
+    .select2-container--krajee-bs4 .select2-selection--single .select2-selection__arrow b {
+        border-radius: 1px;
+        border-color: $clr-menu transparent transparent transparent;
+    }
+
+    .select2-container--krajee-bs4.select2-container--open .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent transparent $clr-menu transparent; 
+    }
+
+    
+}
+
+.select2-container--krajee-bs4:not(.select2-container--disabled) .select2-dropdown{
+    margin-top: 2px;
+    background-color: #FFFFFF;
+    border: 2px solid #D2D3D4;
+    border-radius: 0px;
+}
+
+.select2-container--krajee-bs4.select2-container--open:not(.select2-container--disabled) .select2-selection, .select2-container--krajee-bs4:not(.select2-container--disabled) .select2-selection:focus {
+    // border-color: ;
+    box-shadow: none;
+}
+.select2-container--krajee-bs4.select2-container--open.select2-container--below .select2-selection {
+    border: 2px solid $clr-grey-border;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.select2-container--krajee-bs4.select2-container--open.select2-container--above .select2-selection {
+    border: 2px solid $clr-grey-border;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.select2-container--krajee-bs4:not(.select2-container--disabled) .select2-dropdown {
+    box-shadow: none;
+}
+
+.select2-container--krajee-bs4 .select2-dropdown--above {
+        margin-top: -3px !important;
+}
+
+.select2-selection__clear {
+    display: none;
+}
+/*выбраный текст input*/
+.select2-container--krajee-bs4 .select2-selection--single .select2-selection__rendered {
+    @include fnt-museo (#343537, 17px, 24px, normal);
+}
+/*поиск в input*/
+.select2-search--dropdown {
+    
+    padding: 0;
+}
+.select2-container--krajee-bs4 .select2-search--dropdown .select2-search__field {
+    box-shadow: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='5' stroke='%231D2228' stroke-width='2'/%3E%3Cpath d='M14 14L19 19' stroke='%231D2228' stroke-width='2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 24px;
+    border: none;
+    border-radius: 0px;
+    @include fnt-museo ($clr-menu, 17px, 24px, normal);
+    // background-color: tomato;
+}
+
+.select2-search--dropdown .select2-search__field {
+    padding: 8px 40px 4px 14px;
+}
+
+
+.select2-container.select2-container--krajee-bs4.select2-container--open {
+    @include fnt-museo ($clr-menu, 17px, 24px, normal);
+}
+
+
+// not found
+.select2-container--krajee-bs4 li.select2-results__option {
+    color: $clr-menu;
+    background-color: rgba(220, 24, 51, 0.12);
+}
+
+.select2-results__option {
+    padding: 4px 14px;
+}
+
+.select2-container--krajee-bs4 .select2-results__option[aria-selected] {
+    color: #1D2228;
+}
+.select2-container--krajee-bs4 .select2-results__option[aria-selected=true] {
+    font-weight: 500;
+    background-color: #ffffff;
+}
+
+.select2-container--krajee-bs4 .select2-results__option--highlighted[aria-selected] {
+    background-color: rgba(165, 72, 86, 0.12);
+    font-weight: 500;
+}
+
+.invalid-feedback {
+    display: none;
+}
+
+.is-invalid ~ .invalid-feedback {
+    display: block;
+    margin-bottom: 12px;
+}
+

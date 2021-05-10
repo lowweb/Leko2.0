@@ -1,0 +1,31 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  @include fnt-museo ($clr-white, 16px, 21px, bold);
+  padding: 11px 24px 12px 24px;
+
+
+  &--red {
+      background-color: $clr-red;
+      &:hover {
+          background-color: $clr-red-dark; 
+      }
+     
+      &:active {
+          background-color: $clr-red;
+      }
+  }
+
+  &--scroll {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor:pointer;
+      & > img {
+      transition-duration: 0.3s;
+      }
+      &:hover > img {
+          transform: translate(0px, 5px);
+      }
+  }
+}

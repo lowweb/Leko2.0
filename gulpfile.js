@@ -299,6 +299,17 @@ export const fonts = () => {
           .pipe(sync.stream());
 }
 
+//vendors
+export const copyVendorCss = () => {
+    return gulp.src('./src/vendor/styles/*.css')
+            .pipe(gulp.dest(path.styles.dist));
+}            
+
+export const copyVendorJs = () => {
+    return gulp.src('./src/vendor/js/*.js')
+            .pipe(gulp.dest(path.scripts.dist));
+}
+
 
 // Server
 export const server = () => {
@@ -334,6 +345,8 @@ export const dev = gulp.series(
         html,
         styles,
         scripts,
+        copyVendorJs,
+        copyVendorCss,
         images,
         webp,
         sprites,
