@@ -365,6 +365,8 @@ export const prod = gulp.series(
         html,
         styles,
         scripts,
+        copyVendorJs,
+        copyVendorCss,
         images,
         webp,
         sprites,
