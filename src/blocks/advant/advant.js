@@ -1,11 +1,8 @@
 
-let cards = document.querySelectorAll(".advant__item");
-let field = document.querySelector(".advant");
+if (document.querySelector(".advant")) {
+  let cards = document.querySelectorAll(".advant__item");
+  let field = document.querySelector(".advant");
 
-
-
-if (cards) {
-  
   field.onmouseout = ()=>{
 
     for (i = 0; i < cards.length; ++i) {

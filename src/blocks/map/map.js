@@ -60,9 +60,7 @@ if (document.querySelectorAll(".map__mark")) {
 
   for (i = 0; i < marks.length; ++i) {
     marks[i].onmousemove = (e)=>{
-      
-      // console.log(e.target.dataset.id)
-      // console.log (this.tooltip)
+
       let x = e.clientX + 20
       let y = e.clientY + 20 
       let tooltipHeight = tooltip.getBoundingClientRect()
@@ -70,7 +68,6 @@ if (document.querySelectorAll(".map__mark")) {
       if (y > window.innerHeight / 2) {
         y = e.clientY  - tooltipHeight 
       }
-      console.log (tooltip.childNodes)
       for (var i = 0; i < tooltip.childNodes.length; i++) {
         if (tooltip.childNodes[i].className == "tooltip__cap") {
           tooltip.childNodes[i].innerHTML = tooltipData[e.target.dataset.id].cap
