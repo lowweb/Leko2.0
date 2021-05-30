@@ -33,6 +33,10 @@
 
   .feedback__field {
     align-self: stretch;
+
+    & textarea {
+      min-height: 168px;
+    }
   }
 
   &__form {
@@ -46,6 +50,8 @@
 
   &__input {
     width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     font-size: 16px;
     line-height: 27px;
     letter-spacing: -0.287274px;
