@@ -12,7 +12,7 @@ function getOffset(el) {
 var el=document.getElementById('content-anch');
 
 function scrollFunction() {
-  if (document.body.scrollTop > getOffset(el).top-90 || document.documentElement.scrollTop > getOffset(el).top - 20) {
+  if (document.body.scrollTop > getOffset(el).top - 90 || document.documentElement.scrollTop > getOffset(el).top - 20) {
     document.getElementsByClassName('header')[0].classList.add('header--fix');
     // document.getElementsByClassName('header')[0].classList.remove('header--tr');
   } else {

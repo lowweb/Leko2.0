@@ -29,6 +29,10 @@
     border: none;
     margin-top: 3px;
     margin-bottom: 20px;
+
+    &:hover{
+      background-color: #b11331;
+    }
   }
 
   .feedback__field {

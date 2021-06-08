@@ -18,7 +18,6 @@
   &__item {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       height: 182px;
       padding: 16px 34px 22px 34px;
       background-color: $clr-dark-grey;
@@ -28,6 +27,18 @@
       &-num {
           color: $clr-light-grey;
           transition: color .7s;
+          flex: 1;
+          display: flex;
+          flex-direction: column;;
+
+          &::after {
+            content: '';
+            display: block;
+            transition: border .7s;
+            flex: 1 0 auto;
+            margin: 10px 0 30px 8px;
+            border-left: 1px #{$clr-light-grey} solid;
+          }
       }
 
       &-title {
@@ -44,6 +55,10 @@
 
           & .page-menu__item-num {
             color: #ffffff;
+
+            &::after {
+              border-left: 1px #ffffff solid;
+            }
         }
       }
 
@@ -58,6 +73,10 @@
 
     & .page-menu__item-num {
         color: $clr-red;
+
+        &::after {
+          border-left: 1px #{$clr-red} solid;
+        }
     }
     & .page-menu__item-title {
         color: $clr-red;
