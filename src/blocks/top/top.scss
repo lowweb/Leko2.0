@@ -2,6 +2,8 @@
   position: relative;
   background-color: $clr-grey;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 
   &--pic {
     background: url(images/img-back.jpg);
@@ -34,36 +36,42 @@
       transition: 1s opacity;
   }
 
-  &__content {
+  &__wrap {
     display: flex;
     flex-direction: column;
-    padding: 25px 130px 20px 130px;
+    padding: 20px 30px 128px 30px;
+    max-width: 1260px;
+    flex: 1;
   }
 
+  &__content {
+    display: flex;
+    margin-top: 58px;
+    justify-content: space-between;
+  }
   &__caption {
-    flex: 1 1 415px;
+    flex: 1 1 570px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1246px;
+    max-width: 570px;
   }
   &__title {
       color: #ffffff;
-      font-size: 38px;
-      font-weight: 900;
-      margin: 0;
-      max-width: 490px;
-      margin-bottom: 43px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 120%;
+      max-width: 570px;
   }
 
   &__tagline {
       color: #ffffff;
-      font-size: 15px;
-      font-weight: 300;
-      margin-bottom: 10px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
   }
 
-  &__menu {
-    // align-self: center;
-  }
 }

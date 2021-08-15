@@ -16,6 +16,8 @@
 
 .page, .page__body {
    height: 100%; 
+	 //desktop only
+	 min-width: 1200px;
 }
 
 .page__body{
