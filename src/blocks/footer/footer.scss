@@ -1,45 +1,71 @@
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 47px 130px 50px 130px;
+  
+  padding-top: 49px;
+  padding-bottom: 31px;
+  letter-spacing: 0.01em;
+  color: #353944;
     
+  &__top {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+    & .logo__img {
+      width: 200px;
+      height: auto;
+    }
     &__col {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      margin-right: 104px;
 
-      &--rght {
-        justify-self: flex-end;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &--rght{
+        justify-content: flex-start;
       }
     }
 
-    &__logo {
-      margin-bottom: 12px;
-    }
 
     &__address {
-      font-size: 20px;
-      line-height: 33px;
-      letter-spacing: -0.359093px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      max-width: 219px;
     }
 
-    &__cop {
-      font-size: 16px;
-      line-height: 33px;
-      letter-spacing: -0.287274px;
+    &__bottom {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;    
+      color: #929292;
     }
 
     &__tel {
-      font-weight: 900;
-      font-size: 38px;
-      letter-spacing: -0.682276px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 150%;
       margin-bottom: 10px;
       
     }
 
     &__email {
-      font-weight: 900;
-      font-size: 38px;
-      letter-spacing: -0.682276px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 150%;
+      margin-bottom: 39px;
     }
 
     &__call {
@@ -52,5 +78,28 @@
       &:hover {
         color: $clr-red;
       }
+    }
+
+    &__nav {
+      display: flex;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 250%;
+      
+      &-cap {
+        font-weight: bold;
+      }
+
+      &-list {
+        margin-right: 80px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+
+    }
+
+    &__top {
+      margin-bottom: 26px;
     }
 }

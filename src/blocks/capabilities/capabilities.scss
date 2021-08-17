@@ -1,11 +1,13 @@
 .capabilities {
   color: #ffffff;
-  align-self: stretch;
+  position: relative;
+  padding-top: 93px;
+  padding-bottom: 95px;
 
   &__list {
       display: grid;
-      grid-gap: 18px;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
 
       @media only screen and (max-width: 1450px) {
         grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
@@ -24,29 +26,68 @@
   &__item {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 321px;
-      padding: 42px 23px 52px 23px;
+      // justify-content: space-between;
+      height: 441px;
+      padding: 41px 14px 34px 14px;
       // background-color: $clr-red;
-      background: linear-gradient(47.13deg, #D41235 1.72%, #EA3232 98.28%), #FCB300;
-      box-shadow: 0px 20px 20px rgba(28, 102, 142, 0.2);
-
-      border-bottom-left-radius: 10px;
-      border-top-right-radius: 10px;
+      background: linear-gradient(96.6deg, #D41235 9.8%, #EA3232 90.61%);
+      border-radius: 0px 10px;
+      align-items: center;
   }
 
   &__cap {
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 37px;
-    letter-spacing: -0.574549px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__img {
+    margin-bottom: 20px;
   }
 
   &__text {
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
-    font-weight: 500;
-    line-height: 27px;
-    letter-spacing: -0.287274px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin-top: auto;
   }
 
+
+  & .content__cap {
+    margin-bottom: 39px;
+  }
+
+  &__more {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    align-items: center;
+    display: inline-flex;
+    // flex: 1;
+    margin-top: auto;
+    // justify-content: center;
+
+    &::after {
+      content: '';
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      margin-left: 10px;
+      transform: rotate(-45deg);
+      
+    }
+  }
+
+  & a {
+    color: inherit
+  }
 }

@@ -1,0 +1,19 @@
+.stars {
+  width: auto;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+
+  &--blank {
+    position: relative;
+  }
+  &--fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width .2s ease-out;
+    overflow: hidden;
+    width: calc(var(--rating) / 5 * 100%);
+  }
+}

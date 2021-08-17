@@ -3,29 +3,34 @@
   flex-direction: column;
   
   align-items: center;
-  padding: 45px 30px 30px 30px;
-  background: linear-gradient(20.6deg, #343945 8.53%, #394D61 91.47%), #7C8793;
+  padding-top: 64px;
+  padding-bottom: 23px;
+  background-color: #353944;
   color: #ffffff;
 
   &__cap {
-    font-size: 38px;
-    line-height: 47px;
-    letter-spacing: -0.682276px;
-    font-weight: 900;
-    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 120%; 
+    color: #FFFFFF;
+    margin-bottom: 65px;
   }
 
   &__button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 70px;
-    background-color: $clr-red-btn;
+    padding: 20px 40px;
+    background-color: #D41235;
+    font-style: normal;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 27px;
-    letter-spacing: -0.287274px;
-    font-weight: 900;
-    color: #ffffff;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
     border: none;
     margin-top: 3px;
     margin-bottom: 20px;
@@ -46,9 +51,9 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 35px;
     width: 100%;
-    max-width: 633px;
+    max-width: 480px;
     align-items: center;
   }
 
@@ -56,24 +61,31 @@
     width: 100%;
     min-width: 100%;
     max-width: 100%;
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
-    line-height: 27px;
-    letter-spacing: -0.287274px;
-    font-weight: 500;
-    color: #ffffff;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid #FFFFFF;
+    line-height: 19px;
+    color: #000000;
+    padding: 18px 17px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: none;
 
     &::placeholder {
-      color: #ffffff;
-      opacity: .5;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #949494;
     }
   }
 
   &__agree {
-    font-size: 12px;
-    line-height: 27px;
-    letter-spacing: -0.215456px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #FFFFFF;
   }
 }

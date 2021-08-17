@@ -1,8 +1,9 @@
 .mainsum {
   display: grid;
-  grid-template-columns: repeat(3, minmax(298px,1fr));
+  grid-template-columns: repeat(2, minmax(100px,1fr));
   column-gap: 121px;
   color: #353945;
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -10,18 +11,18 @@
   }
 
   &__digit {
+    font-style: normal;
     font-weight: bold;
-    font-size: 108px;
-    letter-spacing: -5.8173px;
-    color: $clr-red;
-    text-shadow: 10px 5px 15px #afacac;
+    font-size: 67px;
+    line-height: 80px;
+    color: #D41235;
 
     &::after {
       content: '';
       display: block;
       width: 100%;
-      height: 13px;
-      background-color: #353945;
+      height: 3px;
+      background-color: #C4C4C4;
       // margin-top: -27px;
       margin-bottom: 20px;
       // border-bottom: 13px;
@@ -29,8 +30,12 @@
   }
 
   &__about {
+    font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #353944;
   }
 
 }
