@@ -159,20 +159,12 @@
  &__login {
      display: flex;
      align-items: center;
-    // &::before {
-    //     content: '';
-    //     display: inline-flex;
-    //     width: 20px;
-    //     height: 20px;
-    //     margin-right: 10px;
-    //     background-repeat: no-repeat;
-    //     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 3C11.66 3 13 4.34 13 6C13 7.66 11.66 9 10 9C8.34 9 7 7.66 7 6C7 4.34 8.34 3 10 3ZM10 17.2C7.5 17.2 5.29 15.92 4 13.98C4.03 11.99 8 10.9 10 10.9C11.99 10.9 15.97 11.99 16 13.98C14.71 15.92 12.5 17.2 10 17.2Z' fill='%23A0A3A5'/%3E%3C/svg%3E%0A");
-    // }
  }
  &__loginuser {
     color: #ffffff;
     font-size: 15px;
     font-weight: 500;
+    max-width: 180px;
  }
 
  &__logout-btn {
@@ -184,6 +176,7 @@
      background-color: transparent;
      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.09 12.59L8.5 14L13.5 9L8.5 4L7.09 5.41L9.67 8H0V10H9.67L7.09 12.59ZM16 0H2C0.89 0 0 0.9 0 2V6H2V2H16V16H2V12H0V16C0 17.1 0.89 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0Z' fill='%23DE1832'/%3E%3C/svg%3E%0A");
      transition: transform .2s;
+     margin-left: 8px;
 
      &:hover {
          transform: translateX(2px);

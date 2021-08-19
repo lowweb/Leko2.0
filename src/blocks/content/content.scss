@@ -22,4 +22,17 @@
     position: absolute;
     top: -130px;
   }
+  
+  &__row {
+    display: flex;
+  }
+
+  &__row--center {
+    align-items: center;
+  }
+
+  &__clmn {
+    display: flex;
+    flex-direction: column;
+  }
 }

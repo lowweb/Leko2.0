@@ -1,8 +1,11 @@
 .btn {
   border: none;
+  border-radius: 3px;
   cursor: pointer;
-  @include fnt-museo ($clr-white, 16px, 21px, bold);
-  padding: 11px 24px 12px 24px;
+  @include fnt-museo ($clr-white, 16px, 19.2px, normal);
+  padding: 20px 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
 
   &--red {

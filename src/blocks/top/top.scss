@@ -7,10 +7,10 @@
 
 
   &--pic {
-    background: url(images/img-back.jpg);
+    background-image: linear-gradient(to right, rgba(53, 57, 68, 0.6), rgba(53, 57, 68, 0.6)), url('../images/img-back.jpg');
+    // background-image: url(../images/img-back.jpg);
     background-size: cover;
     background-position: center;
-    // height: 416px;
   }
   
   &__video-cont {

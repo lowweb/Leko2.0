@@ -209,7 +209,7 @@
         padding: 8px 14px; 
         @include fnt-museo (#343537, 17px, 24px, normal);
         border: 2px solid $clr-grey-border;
-        border-radius: 0px;
+        border-radius: 3px;
         height: auto;
         width: 100%;
         &.is-invalid,&.isvalid {
@@ -249,10 +249,10 @@
         
     }
     & .form-control:not(.is-invalid) {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
     }
     & .form-control:not(.is-invalid) + .select2 {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
     }
 
     & .invalid-feedback{
@@ -260,13 +260,14 @@
         @include fnt-museo ($clr-red, 14px, 16px, normal);
     }
     & .custom-checkbox label{
-        @include fnt-museo (#343537, 17px, 24px, normal);
+        @include fnt-museo (#343537, 16px, 24px, normal);
     }
 
     & .form-group label {
         display: block;
-        @include fnt-museo (#343537, 18px, 18px, 500);
-        letter-spacing: 0.03em;
+        @include fnt-museo (#343537, 16px, normal, normal);
+        line-height: 150%;
+        letter-spacing: 0.01em;
         margin-bottom: 8px;
     }
 
@@ -274,7 +275,7 @@
         padding: 8px 40px 8px 14px; 
         @include fnt-museo (#343537, 17px, 24px, normal);
         border: 2px solid $clr-grey-border;
-        border-radius: 0px;
+        border-radius: 3px;
         height: auto;
  
     }

@@ -15,13 +15,16 @@
 }
 
 .page, .page__body {
-   height: 100%; 
 	 //desktop only
 	 min-width: 1200px;
 }
 
 .page__body{
     margin: 0 auto;
+
+		&--modalopen {
+			overflow: hidden;
+		}
 }
 
 .main-content {

@@ -1,0 +1,16 @@
+.text {
+  padding-top: 93px;
+  padding-bottom: 50px;
+ 
+
+  & .content__cap {
+    margin-bottom: 50px;
+  }
+
+  &__block {
+      margin-bottom: 16px;
+      &:last-child{
+          margin-bottom: 0;
+      }
+  }
+}

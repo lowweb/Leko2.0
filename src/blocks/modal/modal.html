@@ -1,0 +1,110 @@
+
+<div id="modalCalc" class="modal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <div class="modal__cap">Калькулятор</div>
+  <form action="" class="modal__form calc">
+    <!-- необходимо соотнести тип поля с проверками в данном плагине -->
+    <div class="form-group field-username">
+      <label for="field-messageform-username">ФИО</label>
+      <input type="text" id="messageform-username" class="form-control" name="FormModel[messageform-username]" maxlength="255" placeholder="" aria-invalid="true">
+      <div class="invalid-feedback">Необходимо заполнить ФИО.</div>
+    </div>
+    <!-- необходимо соотнести тип поля с проверками в данном плагине -->
+    <div class="form-group field-tel">
+      <label for="field-messageform-username">Номер телефона</label>
+      <input type="text" id="messageform-username" class="form-control" name="FormModel[messageform-username]" maxlength="255" placeholder="" aria-invalid="true">
+      <div class="invalid-feedback">Необходимо заполнить телефон.</div>
+    </div>
+    <!-- необходимо соотнести тип поля с проверками в данном плагине -->
+    <div class="form-group field-email">
+      <label for="field-messageform-username">Email</label>
+      <input type="text" id="messageform-username" class="form-control" name="FormModel[messageform-username]" maxlength="255" placeholder="" aria-invalid="true">
+      <div class="invalid-feedback">Необходимо заполнить Email.</div>
+    </div>
+
+    
+
+    <div class="form-group field-formmodel-volume required">
+      <label for="formmodel-volume">Объём (м³)</label>
+      <input type="text" id="formmodel-volume" class="form-control" name="FormModel[volume]"
+          placeholder="от 0.1 до 30" aria-required="true" data-plugin-inputmask="inputmask_0a332a33"
+          style="text-align: left;">
+          <div class="invalid-feedback">Необходимо заполнить «Объём (м³)».</div>
+      <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group field-formmodel-weight required">
+        <label for="formmodel-weight">Масса (кг)</label>
+        <input type="text" id="formmodel-weight" class="form-control" name="FormModel[weight]"
+            placeholder="от 1 до 20000" aria-required="true" data-plugin-inputmask="inputmask_43e0c638"
+            style="text-align: left;">
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group field-formmodel-shipping_port_id required">
+      <label for="formmodel-shipping_port_id">Порт отгрузки</label>
+      <select id="formmodel-shipping_port_id" class="form-control select2-hidden-accessible"
+          name="FormModel[shipping_port_id]" size="10" aria-required="true"
+          data-s2-options="s2options_e9bc2761" data-krajee-select2="select2_b6264efc"
+          style="width: 1px; height: 1px; visibility: hidden;"
+          data-select2-id="formmodel-shipping_port_id" tabindex="-1" aria-hidden="true">
+          <option value="">Выберите порт...</option>
+          <option value="1">Busan</option>
+          <option value="2">Shanghai</option>
+          <option value="3">Ningbo</option>
+          <option value="4">Qingdao</option>
+          <option value="5">Tianjin</option>
+          <option value="6">Guangzhou</option>
+          <option value="7">Shenzhen</option>
+          <option value="8">Osaka</option>
+          <option value="9">Kobe</option>
+          <option value="10">Nagoya</option>
+          <option value="11">Yokohama</option>
+          <option value="12">Tokyo</option>
+          <option value="13">Bangkok</option>
+          <option value="14">Ho Chi Minh</option>
+          <option value="15">Kaohsuing</option>
+          <option value="16">Keelung</option>
+          <option value="17">Taichung</option>
+          <option value="18">Tao Yuan</option>
+          <option value="19">Honk Kong</option>
+      </select>                   
+      <div class="invalid-feedback">Необходимо заполнить пункт отправления</div>
+    </div>
+
+    <div class="form-group field-formmodel-destination_id required">
+      <label for="formmodel-shipping_port_id">Пункт назначения</label>
+      <select id="formmodel-destination_id" class="form-control select2-hidden-accessible"
+          name="FormModel[destination_id]" aria-required="true" data-s2-options="s2options_e9bc2761"
+          data-krajee-select2="select2_b6264efc" style="width: 1px; height: 1px; visibility: hidden;"
+          data-select2-id="formmodel-destination_id" tabindex="-1" aria-hidden="true">
+          <option value="">Выберите порт...</option>
+          <option value="1">Busan</option>
+          <option value="2">Shanghai</option>
+          <option value="3">Ningbo</option>
+          <option value="4">Qingdao</option>
+          <option value="5">Tianjin</option>
+          <option value="6">Guangzhou</option>
+          <option value="7">Shenzhen</option>
+          <option value="8">Osaka</option>
+          <option value="9">Kobe</option>
+          <option value="10">Nagoya</option>
+          <option value="11">Yokohama</option>
+          <option value="12">Tokyo</option>
+          <option value="13">Bangkok</option>
+          <option value="14">Ho Chi Minh</option>
+          <option value="15">Kaohsuing</option>
+          <option value="16">Keelung</option>
+          <option value="17">Taichung</option>
+          <option value="18">Tao Yuan</option>
+          <option value="19">Honk Kong</option>
+      </select>
+      <div class="invalid-feedback"></div>
+    </div>
+     
+  </form>
+  <button class="btn btn--red">Расчитать стоимость</button> 
+  </div>
+  
+</div>
