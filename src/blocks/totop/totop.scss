@@ -1,0 +1,28 @@
+.totop {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.2142 0 0 11.2142 0 25C0 38.7858 11.2142 50 25 50C38.7858 50 50 38.7839 50 25C50 11.2161 38.7858 0 25 0ZM25 46.1271C13.3521 46.1271 3.87295 36.6499 3.87295 25C3.87295 13.3501 13.3521 3.87295 25 3.87295C36.6499 3.87295 46.1271 13.3501 46.1271 25C46.1271 36.6499 36.6479 46.1271 25 46.1271Z' fill='%23D41235'/%3E%3Cpath d='M36.0574 27.6723L26.3749 17.9899C25.6197 17.2385 24.3997 17.2385 23.6445 17.9899L13.962 27.6723C13.3405 28.3966 13.3405 29.4675 13.962 30.1917C14.6573 31.0031 15.8811 31.0979 16.6925 30.4027L25 22.0953L33.3269 30.4028C34.0822 31.1542 35.3021 31.1542 36.0574 30.4028C36.8087 29.6475 36.8087 28.4275 36.0574 27.6723Z' fill='%23D41235'/%3E%3C/svg%3E%0A");
+  animation: slide 1.7s ease-in-out;
+  transition: .7s;
+  // animation-duration: 1.7s; 
+
+  &--active {
+    display: block;
+  }
+
+  &:hover {
+    bottom: 52%;
+  }
+}
+
+
+@keyframes slide {
+  0%   {bottom: 35%;}
+  100% {bottom: 50%;}
+}

@@ -9,14 +9,17 @@ function getOffset(el) {
   };
 }
 //определили якорь
-var el=document.getElementById('content-anch');
+let el=document.getElementById('content-anch');
+let toTopButton = document.getElementById("toTopButton");
 
 function scrollFunction() {
-  if (document.body.scrollTop > getOffset(el).top - 90 || document.documentElement.scrollTop > getOffset(el).top - 20) {
+  if (document.body.scrollTop > getOffset(el).top - 190 || document.documentElement.scrollTop > getOffset(el).top - 190) {
     document.getElementsByClassName('header')[0].classList.add('header--fix');
+    toTopButton.classList.add('totop--active');
     // document.getElementsByClassName('header')[0].classList.remove('header--tr');
   } else {
     document.getElementsByClassName('header')[0].classList.remove('header--fix');
+    toTopButton.classList.remove('totop--active');
     // document.getElementsByClassName('header')[0].classList.add('header--tr');
   }
 }
