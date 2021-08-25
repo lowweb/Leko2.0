@@ -1,9 +1,8 @@
-
-<div id="modalCalc" class="modal">
+<div id="simplCalc" class="modal">
   <div class="modal__content">
     <span class="modal__close">&times;</span>
     <div class="modal__cap">Калькулятор</div>
-  <form action="" class="modal__form calc">
+  <form action="" class="calc calc-simpl">
     <!-- необходимо соотнести тип поля с проверками в данном плагине -->
     <div class="form-group field-username">
       <label for="field-messageform-username">ФИО</label>
@@ -104,6 +103,11 @@
     </div>
      
   </form>
+  <label class="modal__agree check">
+    <input class="check__input" type="checkbox">
+    <span class="check__box"></span>
+    <span class="check__label">Я согласен(а) на <a href="#">обрабоку персональных данных</a></span>
+  </label> 
   <button class="btn btn--red">Расчитать стоимость</button> 
   </div>
   

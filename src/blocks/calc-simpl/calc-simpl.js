@@ -1,6 +1,7 @@
+var modal = document.getElementById("simplCalc");
+var btn = document.getElementById("openSimplCalc");
 
-var modal = document.getElementById("modalCalc");
-var btn = document.getElementById("modalOpen");
+console.log('asdasdas=' + btn)
 var closeBtn = document.getElementsByClassName("modal__close")[0];
 
 btn.onclick = function() {

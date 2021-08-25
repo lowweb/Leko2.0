@@ -17,7 +17,7 @@
     background-color: #fefefe;
     margin: 5% auto; 
     padding: 46px 100px 51px 100px;
-    width: 35%; 
+    width: fit-content; 
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -26,12 +26,12 @@
   }
 
 &__close {
-  color: #aaa;
+  color: #D31135;
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 100;
 
   &:hover,
   &:focus {
@@ -72,77 +72,10 @@
   }
 }
 
-&__field {
-  align-self: stretch;
-
-  & textarea {
-    min-height: 168px;
-  }
-}
-
-&__form {
-  // display: flex;
-  flex-direction: column;
-  // gap: 35px;
-  width: 100%;
-  // max-width: 480px;
-  // align-items: center;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 24px;
-  grid-template-areas: 
-                      "fio fio"
-                      "tel tel"
-                      "email email"
-                      "from from"
-                      "dest dest"
-                      "volume weight";                  
-                      
-}
-
-&__input {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-  padding: 18px 17px;
-  background: #FFFFFF;
-  border-radius: 4px;
-  border: 1px solid #A7A7A7;
-
-  &::placeholder {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #949494;
-  }
-}
 
 &__agree {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 12px;
-  text-align: center;
-  color: #FFFFFF;
+  align-self: flex-start;
 }
-& .field-username {
-  grid-area: fio;
-}
-& .field-tel {
-  grid-area: tel;
-}
-
-& .field-email {
-  grid-area: email;
-}
-
 
 
 }
