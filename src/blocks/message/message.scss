@@ -1,0 +1,30 @@
+.message {
+  font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+
+text-align: center;
+
+color: #000000;
+  & .modal__content {
+    padding: 117px 217px;
+  }
+  
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+    
+
+    &::after {
+      content: '';
+      background-color: #D41235;
+      height: 7px;
+      width: 100px;
+      margin-top: 23px;
+    }
+  }
+}

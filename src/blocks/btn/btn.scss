@@ -19,6 +19,17 @@
       }
   }
 
+  &--green {
+    background-color: #35c253;
+    &:hover {
+        background-color: #3fa34d;
+    }
+    &:active {
+        background-color: #35c253;
+    }
+  }
+
+
   &--scroll {
       display: flex;
       align-items: center;

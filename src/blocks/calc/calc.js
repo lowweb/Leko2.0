@@ -6,7 +6,7 @@ if (document.getElementById("openSimplCalc")) {
 else {
   btn = document.getElementById("openAuthCalc");
 }
-console.log('asdasdas=' + btn)
+
 var closeBtn = document.getElementsByClassName("modal__close")[0];
 
 btn.onclick = function() {

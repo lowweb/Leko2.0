@@ -1,7 +1,7 @@
 <div id="simplCalc" class="modal">
     <div class="modal__content">
       <span class="modal__close">&times;</span>
-      <div class="modal__cap">Насколько выгодна перевозка сборных грузов с нами?</div>
+      <div class="modal__cap calc__modal-cap">Насколько выгодна перевозка сборных грузов с нами?</div>
       <div class="calc">
         <!-- <div class="wrapper"> -->
             <div class="calc__body">
@@ -89,7 +89,7 @@
                             </div>
                                     
         
-                        <label class="check">
+                        <label class="calc__check check">
                             <input class="check__input" type="checkbox">
                             <span class="check__box"></span>
                             <span class="check__label">Доставка до “дверей”</span>
@@ -114,9 +114,12 @@
                             </label>
                         </div>            
                     </div>
-                    <div class="calc__sepline"></div>
-        
-                        <button class="btn btn--red">Расчитать</button>           
+                    <!-- <div class="calc__sepline"></div> -->
+                    <div class="calc__btn">
+                        <button class="btn btn--green">Заявка</button> 
+                        <button class="btn btn--red">Расчитать</button> 
+                    </div>
+                                  
                 </form>
       
                 <div class="calc__result">

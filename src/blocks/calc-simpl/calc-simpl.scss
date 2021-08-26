@@ -3,19 +3,19 @@
     flex-direction: column;
     // gap: 35px;
     width: 100%;
-    // max-width: 480px;
-    // align-items: center;
+    min-width: 600px;
   
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 24px;
+    grid-column-gap: 20px;
     grid-template-areas: 
                         "fio fio"
                         "tel tel"
                         "email email"
                         "from from"
                         "dest dest"
-                        "volume weight";  
+                        "volume weight"
+                        "agree agree";  
 
 & .field-username {
   grid-area: fio;
@@ -26,6 +26,10 @@
 
 & .field-email {
   grid-area: email;
-}                        
+}
+
+& .modal__agree {
+  grid-area: agree;
+}
 
 }

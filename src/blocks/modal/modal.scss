@@ -16,13 +16,13 @@
   &__content {
     background-color: #fefefe;
     margin: 5% auto; 
-    padding: 46px 100px 51px 100px;
-    width: fit-content; 
+    padding: 46px 50px 51px 50px;
+    width: max-content; 
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
-    min-width: 700px;
+    animation: modalshow .3s ease-in-out;
   }
 
 &__close {
@@ -78,4 +78,10 @@
 }
 
 
+}
+
+
+@keyframes modalshow {
+  0% {scale: 0.5;}
+  100% {scale: 1;}
 }
