@@ -10,7 +10,7 @@
     background-color: #1D2228;
     opacity: 0.4;
     border-radius: 0px;
-    
+    z-index: 3;
   }
   &::after {
     content: url('../images/loader.svg');
