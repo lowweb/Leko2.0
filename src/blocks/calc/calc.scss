@@ -166,12 +166,14 @@
                             "from from"
                             "dest dest"
                             "door door"
-                            "inko inko";
+                            "inko inko"
+                            "exwaddress exwaddress";
         @media only screen and (min-width: 650px) and (max-width: 1050px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-areas: "volume weight from from"
                             "dest dest door door"
-                            "inko inko inko inko";
+                            "inko inko inko inko"
+                            "exwaddress exwaddress exwaddress exwaddress";
         }                    
                             
 
@@ -200,6 +202,10 @@
      & .radio__group{
         grid-area: inko;
 
+     }
+
+     & .field-formmodel-exw_address {
+         grid-area: exwaddress;
      }
 
      & .btn {

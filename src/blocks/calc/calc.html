@@ -72,7 +72,7 @@
         
                             <div class="form-group field-formmodel-volume required">
                                 <label for="formmodel-volume">Объём (м³)</label>
-                                <input type="text" id="formmodel-volume" class="form-control" name="FormModel[volume]"
+                                <input type="text" id="formmodel-volume" class="form-control is-invalid" name="FormModel[volume]"
                                     placeholder="от 0.1 до 30" aria-required="true" data-plugin-inputmask="inputmask_0a332a33"
                                     style="text-align: left;">
                                     <div class="invalid-feedback">Необходимо заполнить «Объём (м³)».</div>
@@ -112,6 +112,12 @@
                                 <span class="radio__box"></span>
                                 <span class="radio__label">EXW</span>
                             </label>
+                        </div>
+                        <div class="form-group field-formmodel-exw_address fca-exw">
+                            <label for="formmodel-exw_address">Адрес местонахождения груза (на английском языке)</label>
+                            <input type="text" id="formmodel-exw_address" class="form-control" name="FormModel[exw_address]" maxlength="255" placeholder="Введите адрес на английском языке" aria-invalid="true">
+                            
+                            <div class="invalid-feedback">Необходимо заполнить «Адрес местонахождения груза (на английском языке)».</div>
                         </div>            
                     </div>
                     <!-- <div class="calc__sepline"></div> -->
