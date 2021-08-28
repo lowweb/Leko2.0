@@ -159,7 +159,7 @@
     }
      &__form {
         display: grid;
-        grid-gap: 20px;
+        grid-row-gap: 20px;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 24px;
         grid-template-areas: "volume weight"
